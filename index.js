@@ -20,16 +20,34 @@ var r = request(login_options, (error, response, body) =>  {
 
   var $ = cheerio.load(body);
 
-  // 取得 dish category title
-  // var dct = $('.dish-category-title');
-  // for(var i = 0; i < dct.length; i++) {
-  //   console.log(dct.eq(i).text());
-  // }
+  var menu = new Array();
+  var menuData = new Object();
 
-  var dishName = $('[data-menu-category-id=\'656027\']');
-  for(var i = 0; i < dishName.length; i++){
-    console.log(dishName.eq(i).find('.dish-name span').text());
+  var dishControlHolder = $('.dish-control-holder li');
+  var menu_categories = new Array();
+  for(var i = 0;i < dishControlHolder.length; i ++) {
+    // console.log(dishControlHolder.eq(i).find('a').attr('data-id'));
+    var menu_category = new Object();
+    menu_category.id = dishControlHolder.eq(i).find('a').attr('data-id');
+    menu_category.name = dishControlHolder.eq(i).find('a').attr('title');
+
+    var dataMenuCategoryId= $(`[data-menu-category-id=${menu_category.id}]`);
+    var products = new Array();
+    for(var j = 0; j < dataMenuCategoryId.length; j++) {
+      var product = new Object();
+      product = JSON.parse(dataMenuCategoryId.eq(j).attr('data-object'));
+      products.push(product);
+    }
+    menu_category.products = products;
+
+    menu_categories.push(menu_category);
+
   }  
+  // console.log(menu_categories);
+  menuData.menu_categories = menu_categories;
+  menu.push(menuData);
+  writeIntoJSON('menu.json', menu);
+   
   
 
   // var whereWrapper = $(".where-wrapper");
