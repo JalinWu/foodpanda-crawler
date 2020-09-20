@@ -31,7 +31,6 @@ var r = request(login_options, (error, response, body) =>  {
     console.log(dishName.eq(i).find('.dish-name span').text());
   }  
   
-  
 
   // var whereWrapper = $(".where-wrapper");
   // var dataVendor = JSON.parse($(whereWrapper[0]).attr('data-vendor'));
