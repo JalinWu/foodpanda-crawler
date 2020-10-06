@@ -4,7 +4,7 @@ var request = require("request");
 var cheerio = require("cheerio");
 var fs = require('fs')
 
-var url = "https://www.foodpanda.com.tw/restaurant/z5oy/pizza-hut--184";
+var url = "https://www.foodpanda.com.tw/restaurant/f6jb/chao-wei-jue-tang-lu-he-zuo-she-tai-bei-dong-hu-fen-she";
 
 var headers = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
