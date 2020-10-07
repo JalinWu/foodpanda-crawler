@@ -10,6 +10,11 @@ It's a tiny tool(web crawler) to get menu from foodpanda
 $ npm install
 ```
 
+```js
+// index.js
+const url = ''; // vendor's url
+```
+
 ```sh
 $ node index.js
 
