@@ -1,6 +1,6 @@
 # foodpanda-crawler
 
-It's a tiny tool(web crawler) to get menu from foodpanda
+It's a tiny tool(web crawler) to get menu from foodpanda.
 
 ### Version: 1.0.0
 
