@@ -4,7 +4,7 @@ const request = require("request");
 const cheerio = require("cheerio");
 const fs = require('fs')
 
-const url = "https://www.foodpanda.com.tw/restaurant/f6jb/chao-wei-jue-tang-lu-he-zuo-she-tai-bei-dong-hu-fen-she";
+const url = "https://www.foodpanda.com.tw/restaurant/d6ek/da-hu-guo-yin-tai-bei-nan-gang-dian";
 
 // 模擬用瀏覽器，避免爬蟲被擋
 const headers = {
